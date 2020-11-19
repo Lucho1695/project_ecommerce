@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pay Methods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Date</th>
+      <th>Card number</th>
+      <th>Csv</th>
+      <th>Card</th>
+      <th>Bank</th>
+      <th>Card type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pay_methods.each do |pay_method| %>
+      <tr>
+        <td><%= pay_method.method %></td>
+        <td><%= pay_method.date %></td>
+        <td><%= pay_method.card_number %></td>
+        <td><%= pay_method.csv %></td>
+        <td><%= pay_method.card %></td>
+        <td><%= pay_method.bank %></td>
+        <td><%= pay_method.card_type %></td>
+        <td><%= link_to 'Show', pay_method %></td>
+        <td><%= link_to 'Edit', edit_pay_method_path(pay_method) %></td>
+        <td><%= link_to 'Destroy', pay_method, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pay Method', new_pay_method_path %>

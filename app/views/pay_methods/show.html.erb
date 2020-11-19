@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @pay_method.method %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @pay_method.date %>
+</p>
+
+<p>
+  <strong>Card number:</strong>
+  <%= @pay_method.card_number %>
+</p>
+
+<p>
+  <strong>Csv:</strong>
+  <%= @pay_method.csv %>
+</p>
+
+<p>
+  <strong>Card:</strong>
+  <%= @pay_method.card %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= @pay_method.bank %>
+</p>
+
+<p>
+  <strong>Card type:</strong>
+  <%= @pay_method.card_type %>
+</p>
+
+<%= link_to 'Edit', edit_pay_method_path(@pay_method) %> |
+<%= link_to 'Back', pay_methods_path %>

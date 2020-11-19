@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="luiscarlosgarcialucho@gmail.com">
+
+
+  <title>Project</title>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body class="devise">
+  <div class="devise_master_container">
+    <div class="principal_container">
+      <!-- Start Container -->
+      <div class="container">
+        <!--Starts row of warnings-->
+        <div class="row">
+          <div class="col-md-12">
+            <!--warnings section begings -->
+            <% if notice || alert %>
+            <div class="responsive">
+              <center>
+                <div class="col-lg-12">
+                  <div class="alert alert-info alert-dismissable col-sm-6 col-sm-offset-3">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <% if alert %>
+                    <i class="fa fa-info-circle"></i><p class="alert alert-danger"><%= alert %></p>
+                    <% end %>
+                    <% if notice %>
+                    <i class="fa fa-info-circle"></i><p class="alert alert-success"><%= notice %></p>
+                    <% end %>
+                  </div>
+                </div>
+              </center>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <!--Ends row of warnings-->
+        <!-- Start row title -->
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Project Inicio de sesion</h1>
+          </div>
+        </div>
+        <!-- End row title -->
+        <!-- Starts the row of the form -->
+        <div class="row">
+          <div class="col-md-6 offset-md-3 devise_form_container">
+            <div class="form_container_top">
+              <div class="container_top_left">
+                <h3>Incio de Sesión</h3>
+              </div>
+              <div class="container_top_rigth">
+                <i class="fas fa-sign-in-alt fa-3x"></i>
+              </div>
+            </div>
+            <div class="form_container_bottom">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ends the row of the form -->
+        <div class="form_container_ref">
+          <center>
+            <p class="text-muted"><a></a></p>
+          </center>
+        </div>
+      </div>
+
+    </div>
+    <!-- Ends Container -->
+  </div>
+</body>
+</html>

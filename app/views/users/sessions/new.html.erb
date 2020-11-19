@@ -1,0 +1,34 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <div class="col-md-12 mb-8">
+      <!-- Starts email -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          </div>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+        </div>
+      </div>
+
+      <!-- Starts password -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-unlock-alt"></i></span>
+          </div>
+          <%= f.password_field :password, autocomplete: "off", placeholder: "Password", class: "form-control" %>
+        </div>
+      </div>
+
+
+      <hr/>
+
+      <div class="actions">
+        <%= f.submit "Log in", class: "btn btn-primary", id: 'log_in' %>
+      </div>
+    </div>
+
+
+<% end %>

@@ -1,0 +1,250 @@
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+/*  text-align: center; */
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.person {
+  max-width: 80%;
+  margin: 3rem;
+  border-radius: 25px;
+}
+.person + .person {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .summaries {
+  background-image: url(summaries.jpg);
+  background-size: cover;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #ddd;
+} */
+
+.summary_table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+  width: 960px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+
+/* Link chart
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.link-chart {
+  border-bottom: 1px solid #c2c7d0;
+}
+
+#mynetwork {
+  width: auto;
+  height: 600px;
+  border: 1px solid lightgray;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .categories {
+  background-image: url('../images/chat-bg.jpg');
+  background-size: cover;
+  color: #000;
+} */
+.categories .section-description {
+  margin-bottom: 4rem;
+}
+
+.message_table {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+  width: 960px;
+  height: 800px;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .person {
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .person + .person {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .person {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .person + .person {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .person {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .person + .person {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+
+.order_item_list{
+  position:-webkit-sticky;
+  position:sticky;
+  top: 32px;
+  z-index: 1000;
+}
+
+.user_log_with {
+  overflow-y: scroll;
+  /* bottom: auto; */
+  max-height: 35%;
+  position: fixed !important;
+}
+
+
+.results {
+  overflow-y: scroll;
+  max-height: 250px;
+}
+
+.noresults {
+  overflow-y: scroll;
+  max-height: 250px;
+}
+
+.sticky_project_navbar{
+  position:-webkit-sticky;
+  position:sticky;
+  top: 0px;
+  z-index: 2000;
+  width: 100%;
+}
+
+/* .multiselect-container {
+  width: 100% !important;
+} */
+
+/*
+  created by efranco for all the multiselect because is not supporting bootstrap 4
+  it is been added to app/assets/javascripts/bootstrap-multiselect.js
+  line 368 buttonClass
+*/
+.btn-multiselect {
+  border: 1px solid #ced4da !important;
+  border-radius: 0.25rem !important;
+}
+
+#eventSpan{
+  overflow-y: scroll;
+   max-height: 512px;
+}
+
+#json_object{
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.table_card table, thead, th, td, tbody {
+  text-align: center;
+  font-size: 16px;
+  max-width: 100%;
+}
+
+.notification {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.notification .badge {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
