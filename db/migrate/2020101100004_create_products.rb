@@ -4,7 +4,6 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :client_id
       t.string :description
-      t.text :photo, limit: 6.megabytes - 1
       t.float :price
 
       t.timestamps

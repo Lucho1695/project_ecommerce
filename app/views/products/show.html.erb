@@ -6,23 +6,18 @@
 </p>
 
 <p>
-  <strong>Client:</strong>
-  <%= @product.client_id %>
-</p>
-
-<p>
-  <strong>Integer:</strong>
-  <%= @product.integer %>
-</p>
-
-<p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Photo:</strong>
-  <%= @product.photo %>
+  <strong>Imagen:</strong>
+  <%= image_tag(@product.image) %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @product.price %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

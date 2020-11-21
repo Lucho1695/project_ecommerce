@@ -1,4 +1,4 @@
 class Product < ApplicationRecord
-  has_attached_file :photo
+  has_one_attached :image
 
 end

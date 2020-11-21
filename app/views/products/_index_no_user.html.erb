@@ -1,13 +1,15 @@
 <div class="card-deck">
   <% Product.all.each do | product | %>
-    <%= product.photo %>
     <div class="card">
       <div class="card-header">
-
+        <%= product.price %>
       </div>
-
       <div class="card-body">
-
+        <%= image_tag product.image, class: "image_principal_page" %>
+      </div>
+      <div class="card-footer">
+        <%= product.description %>
+        <%= link_to "Comprar", orders_path, class: "btn btn-success float-right" %>
       </div>
     </div>
 

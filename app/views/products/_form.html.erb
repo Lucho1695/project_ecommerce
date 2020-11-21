@@ -13,27 +13,28 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.label current_user.name %>
   </div>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.text_field :client_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :integer %>
-    <%= form.text_field :integer %>
+    <%= form.label :precio %>
+    <%= form.number_field :price %>
   </div>
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :photo %>
-    <%= f.file_field :image %>
+    <%= form.label :image %>
+    <% if !product.image.attachment.nil? %>
+      <%= image_tag product.image, class: "form_img" %>
+      <%= form.label product.image.attachment.blob.filename %>
+      <%= form.file_field :image %>
+    <% else %>
+      <%= form.file_field :image %>
+    <% end %>
   </div>
 
   <div class="actions">
