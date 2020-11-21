@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
   <%= favicon_link_tag asset_path('logo.png'), :rel => 'icon', :type => 'image/png' %>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="This is a page for eccomerce">
     <meta name="author" content="luiscarlosgarcialucho@gmail.com">
     <title>eCommerce</title>
     <%= csrf_meta_tags %>
@@ -15,42 +14,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="page-top" >
-    <header>
-      <nav class="navbar navbar-expand navbar-dark bg-dark static-top sticky_eCommerce_navbar">
-        <a class="navbar-brand mr-1" href="/">
-          <img src="<%= asset_path('logo.png') %>" style="widht: 85px; height: 50px">
-          Your E-commerce
-        </a>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </div>
-        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-          <%= link_to edit_user_path(current_user), class: "btn btn-success", id: 'user_profile' do %><i class="fa fa-fw fa-user"></i> <%= t('layouts.application.profile') %><% end %>
-          <%= link_to "Cliente", clients_path, class: "btn btn-success" %>
-          <%= link_to "Productos", products_path, class: "btn btn-success" %>
-          <%= link_to "Ordenes", orders_path, class: "btn btn-success" %>
-          <%= link_to 'Cerrar Sesion', destroy_user_session_path, method: :delete, class: "btn btn-warning" %>
-        </form>
-        <!-- Navbar -->
-        <ul class="navbar-nav ml-auto ml-md-0">
-          <li class="nav-item dropdown no-arrow">
-            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="mdi-access-point"></i>
-              <%= current_user.name %>
-            </a>
-
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <body class="body">
+    <div class="wrapper">
+      <%= render "layouts/top_var" %>
+    </div>
 
     <main class="bd-content p-5">
       <div id="wrapper">

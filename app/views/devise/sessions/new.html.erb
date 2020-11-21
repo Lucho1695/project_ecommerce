@@ -1,7 +1,14 @@
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-    <div class="col-md-12 mb-8">
+<div class="card-header" style="background-color: #A7D5DC">
+  <div class="col-md-12">
+    <div class="text-center">
+      <i class="fas fa-sign-in-alt fa-2x"></i><h2>Iniciar sesion</h2>
+    </div>
+  </div>
+</div>
+<br>
+<div class="card-body">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="col-md-12">
       <!-- Starts email -->
       <div class="form-group">
         <div class="input-group">
@@ -26,9 +33,8 @@
       <hr/>
 
       <div class="actions">
-        <%= f.submit "Log in", class: "btn btn-primary", id: 'log_in' %>
+        <%= f.submit "Iniciar sesion", class: "btn btn-primary", id: 'log_in' %>
       </div>
     </div>
-
-
-<% end %>
+  <% end %>
+</div>

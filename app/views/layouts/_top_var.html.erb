@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand navbar-dark static-top sticky_eCommerce_navbar">
+  <a class="navbar-brand mr-1" href="/">
+    <img src="<%= asset_path('logo.png') %>" style="widht: 85px; height: 50px">
+    Your E-commerce
+  </a>
+  <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <ul class="navbar-nav ml-auto">
+      <% if current_user.nil? %>
+        <%= render 'layouts/no_login_user' %>
+      <% else %>
+        <%= render 'layouts/user_login' %>
+      <% end %>
+    </ul>
+  </form>
+</nav>
