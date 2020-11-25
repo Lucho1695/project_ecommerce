@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Clients</h1>
-
+<div class="card">
+  <div class="card-header bg-success text-white">
+  <center><h1>Clientes</h1></center>
+  </div>
 <table>
   <thead>
     <tr>
@@ -24,10 +25,11 @@
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Client', new_client_path %>
+  <button type="button" class="btn btn-primary"><a style="color:#FFFFFF" <%= link_to 'New Client', new_client_path %></button>
+</div>

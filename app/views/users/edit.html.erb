@@ -1,6 +1,20 @@
-<h1>Editing User</h1>
 
-<%= render 'form', user: @user %>
+ <h3><button type="button" class="btn btn-primary"><a style="color:#FFFFFF" href="/users/edit">Perfil</a></button>
+   <button type="button" class="btn btn-primary"><a style="color:#FFFFFF" href="">lista de compras</a></button>
+   <button type="button" class="btn btn-primary"><a style="color:#FFFFFF" href="/historials">Historial</a></button>
+   <button type="button" class="btn btn-primary"><a style="color:#FFFFFF" href="/orders">Pedidos</a></button>
+   <button type="button" class="btn btn-primary"><a style="color:#FFFFFF" href="/products">salir</a></button></h3>
 
+
+  <div class="card">
+    <div class="card-header bg-success text-white">
+<center><h1>Editar perfil</h1>
+</center>
+</div>
+<center><%= render 'form', user: @user %>
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+</center>
+  </div>
+
+
