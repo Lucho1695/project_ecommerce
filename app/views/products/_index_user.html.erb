@@ -1,26 +1,35 @@
-
-<div class="card-deck">
-
-
-<% @products.each do |product| %>
-<div class="card table-responsive">
-  <div class="card-header">
-    <%= product.price %>
-  </div>
-  <div class="card-body">
-    <%= image_tag product.image, class: "image_principal_page" %>
-  </div>
-  <div class="card-footer">
-    <%= product.description %>
-    <%= link_to "Comprar", orders_path, class: "btn btn-success float-right" %>
-    <div><%= link_to 'Mostrar', product %></div>
-    <div><%= link_to 'Editar', edit_product_path(product) %></div>
-    <div><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-  </div>
-</div>
-<% end %>
-
+<div class="col-md-12">
+  <%= link_to 'Nuevo Producto', new_product_path, class: "btn btn-info col-md-12" %>
 </div>
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+
+<div class="card-deck">
+
+  <div class="col-md-12 row">
+    <% @products.each do |product| %>
+      <div class="col-md-4">
+        <div class="card table-responsive">
+          <div class="card-header">
+            <%= product.price %>
+          </div>
+          <div class="card-body">
+            <%= image_tag product.image, class: "image_principal_page" %>
+          </div>
+          <div class="card-footer">
+            <%= product.description %>
+            <%= link_to "Comprar", orders_path, class: "btn btn-success float-right" %>
+            <div class="row">
+              <%= link_to 'Mostrar', product, class:"btn btn-info m-2" %>
+              <%= link_to 'Editar', edit_product_path(product), class:"btn btn-info m-2" %>
+              <%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info m-2" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+<br>

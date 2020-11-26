@@ -1,27 +1,16 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# project_eCommerce
-# project_eCommerce
 # project_ecommerce
+
+Los requisitos para ejecutar este programa son tener instalados:
+  *node js
+  *yarn
+  *ruby 2.6.6
+
+El motor de base de datos es sqlite3
+
+Una vez tenga instalados estos programas debera ejecutar los siguientes comandos
+bundle update && bundle install
+npm install
+yarn install
+rails db:create && rails db:migrate
+rails s

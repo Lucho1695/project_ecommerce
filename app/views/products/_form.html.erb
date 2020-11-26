@@ -11,33 +11,29 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.label current_user.name %>
-  </div>
 
-  <div class="field">
-    <%= form.label :precio %>
-    <%= form.number_field :price %>
-  </div>
+  <div class="col-md-12">
+    <div class="form-group row text-right">
+      <%= form.label :precio, class: "col-md-4" %>
+      <%= form.number_field :price, class: "form-control col-md-6" %>
+    </div>
+    <div class="form-group row text-right">
+      <%= form.label :descripcion, class: "col-md-4" %>
+      <%= form.text_area :description, class: "form-control col-md-6" %>
+    </div>
+    <div class="form-group row text-right">
+      <%= form.label :imagen, class: "col-md-4" %>
+      <% if !product.image.attachment.nil? %>
+        <%= image_tag product.image, class: "form_img" %>
+        <%= form.file_field :image, class: "col-md-6" %>
+      <% else %>
+        <%= form.file_field :image, class: "col-md-6" %>
+      <% end %>
+    </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <% if !product.image.attachment.nil? %>
-      <%= image_tag product.image, class: "form_img" %>
-      <%= form.label product.image.attachment.blob.filename %>
-      <%= form.file_field :image %>
-    <% else %>
-      <%= form.file_field :image %>
-    <% end %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", class: 'btn btn-success float-right' %>
   </div>
 <% end %>

@@ -1,9 +1,19 @@
 <div class="card">
   <div class="card-header bg-success text-white">
-<center><h1>New Product</h1></center>
-  </div><center>
-<%= render 'form', product: @product %>
-
-<%= link_to 'Back', products_path %>
-</center>
+    <div class="col-md-12 row">
+      <div class="col-md-11">
+        <center><h1>Nuevo Producto</h1></center>
+      </div>
+      <div class="col-md-1">
+        <%= link_to url_for(products_path), class: 'btn btn-secondary', id: 'index_button' do%>
+          <i class="fas fa-list-ul"></i> Volver
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <center>
+      <%= render 'form', product: @product %>
+    </center>
+  </div>
 </div>

@@ -1,18 +1,20 @@
 <div class="card-deck">
-  <% Product.all.each do | product | %>
-    <div class="card">
-      <div class="card-header">
-        <%= product.price %>
+  <div class="col-md-12 row">
+    <% Product.all.each do | product | %>
+      <div class="col-md-4">
+        <div class="card table-responsive">
+          <div class="card-header">
+            <%= product.price %>
+          </div>
+          <div class="card-body">
+            <%= image_tag product.image, class: "image_principal_page" %>
+          </div>
+          <div class="card-footer">
+            <%= product.description %>
+            <%= link_to "Comprar", orders_path, class: "btn btn-success float-right" %>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <%= image_tag product.image, class: "image_principal_page" %>
-      </div>
-      <div class="card-footer">
-        <%= product.description %>
-        <%= link_to "Comprar", orders_path, class: "btn btn-success float-right" %>
-      </div>
-    </div>
-
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
