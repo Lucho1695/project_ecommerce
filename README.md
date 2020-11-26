@@ -2,9 +2,9 @@
 # project_ecommerce
 
 Los requisitos para ejecutar este programa son tener instalados:
-  *node js
-  *yarn
-  *ruby 2.6.6
+* node js
+* yarn
+* ruby 2.6.6
 
 El motor de base de datos es sqlite3
 
